@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://redcat-hub.netlify.app/sitemap.xml
+Sitemap: https://redcat.robertspier.nl/sitemap.xml

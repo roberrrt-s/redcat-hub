@@ -19,10 +19,15 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Uncomment to serve a port under this domain instead of linking out —
-# pattern B from the deployment plan. The port must then build with a
-# matching Vite `base`.
-# [[redirects]]
-#   from = "/stedentocht/*"
-#   to = "https://redcat-stedentocht.netlify.app/:splat"
-#   status = 200
+# The ports live under this domain as paths, proxied to their own Netlify
+# sites (200 = rewrite, the address bar keeps this domain). The game builds
+# with a relative Vite `base`, so its assets resolve under the prefix.
+[[redirects]]
+  from = "/de-spannende-stedentocht"
+  to = "/de-spannende-stedentocht/"
+  status = 301
+
+[[redirects]]
+  from = "/de-spannende-stedentocht/*"
+  to = "https://redcat-stedentocht.netlify.app/:splat"
+  status = 200

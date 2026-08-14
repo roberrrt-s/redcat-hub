@@ -28,9 +28,9 @@ const PACKS: Pack[] = [
       { naam: "De Razende Rekenrace", vak: "Oefen rekenen in een razende race door de ruimte.", jaar: "1996", url: null },
       {
         naam: "De Spannende Stedentocht", vak: "Zoek de kaartstukken bij elkaar in de twaalf provincies.", jaar: "1997",
-        // The one live port. Swap for the production URL (or "/stedentocht/"
-        // behind the hub's Netlify proxy) when the site names are settled.
-        url: "https://redcat-stedentocht.netlify.app",
+        // The one live port, served under this domain via the netlify.toml
+        // proxy to redcat-stedentocht.netlify.app.
+        url: "/de-spannende-stedentocht/",
       },
       { naam: "De Woeste Woordenbrij", vak: "Haal je gestolen letters terug en oefen spelling.", jaar: "1996", url: null },
       { naam: "Het Levende Kleurboek", vak: "Een kleurboek waarvan de platen tot leven komen.", jaar: "1997", url: null },
