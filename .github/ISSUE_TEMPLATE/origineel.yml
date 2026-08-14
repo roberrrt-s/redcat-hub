@@ -1,0 +1,43 @@
+name: "Anders dan het origineel"
+description: "Niets kapot, maar de port doet iets anders dan het echte spel uit de jaren negentig."
+title: "[Origineel] "
+labels: ["origineel"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dit is de melding waar dit project op draait: de ports willen
+        **getrouw** zijn, en wie het origineel kent ziet dingen die niemand
+        anders ziet. Hoe klein ook — een kleur, een geluidje, de volgorde
+        van twee schermen — meld het.
+  - type: dropdown
+    id: spel
+    attributes:
+      label: Welke titel?
+      options:
+        - De Spannende Stedentocht
+    validations:
+      required: true
+  - type: textarea
+    id: verschil
+    attributes:
+      label: Wat doet de port anders?
+      description: Beschrijf wat je in de port ziet of hoort.
+      placeholder: "De hoge scores staan in een ander lettertype dan het spelerscherm."
+    validations:
+      required: true
+  - type: textarea
+    id: origineel
+    attributes:
+      label: Wat doet het origineel?
+      description: |
+        Hoe hoort het volgens jouw herinnering of, nog beter, volgens bewijs?
+        Een screenshot of filmpje van het echte spel (eigen disc, DOSBox,
+        een oude playthrough) maakt de melding goud waard.
+    validations:
+      required: true
+  - type: input
+    id: waar
+    attributes:
+      label: Waar in het spel?
+      placeholder: "het hoofdmenu / de vraag na een stad / het eindscherm"

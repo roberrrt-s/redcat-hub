@@ -1,0 +1,51 @@
+name: "Bug"
+description: "Er gaat iets kapot of werkt niet: vastlopers, foutmeldingen, geluid dat wegvalt, knoppen die niets doen."
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bedankt voor het melden! Dit is de centrale plek voor issues over
+        alle RedCat-ports. Werkt iets anders dan in het **origineel** maar
+        zonder dat er iets kapot is? Gebruik dan het formulier
+        "Anders dan het origineel".
+  - type: dropdown
+    id: spel
+    attributes:
+      label: Welke titel?
+      options:
+        - De Spannende Stedentocht
+        - De hub-website zelf
+    validations:
+      required: true
+  - type: textarea
+    id: wat
+    attributes:
+      label: Wat ging er mis?
+      description: Beschrijf wat je zag. Een screenshot of schermopname zegt vaak meer dan tekst — slepen in dit veld werkt.
+      placeholder: "RedCat liep vast tegen de brug bij Kampen en reageerde nergens meer op."
+    validations:
+      required: true
+  - type: textarea
+    id: stappen
+    attributes:
+      label: Hoe kwam je daar?
+      description: De stappen om het na te doen, voor zover je ze nog weet.
+      placeholder: |
+        1. Nieuwe speler, groep 5
+        2. Overijssel gestart
+        3. Naar de brug ten noorden van Zwolle gelopen
+  - type: input
+    id: speler
+    attributes:
+      label: Speler en voortgang
+      description: Groep/klas, provincie en hoe ver je was. Dat bepaalt welke vragen en sloten actief zijn.
+      placeholder: "klas 5, derde provincie (Groningen), 12 puzzelstukken"
+  - type: input
+    id: omgeving
+    attributes:
+      label: Browser en systeem
+      placeholder: "Safari 19 op macOS / Chrome op Windows 11 / Firefox op Linux"
+    validations:
+      required: true

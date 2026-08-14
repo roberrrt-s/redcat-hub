@@ -7,6 +7,11 @@ navigates.
 
 Currently live: **De Spannende Stedentocht**.
 
+This is also the **public issue tracker for all the ports** — the port repos
+themselves stay private (they hold the reverse-engineering work), so bugs,
+fidelity reports ("anders dan het origineel") and ideas all land here, via
+the issue forms under `.github/ISSUE_TEMPLATE/`.
+
 ## Stack
 
 Vite + React + TypeScript. The title list is a single data array in

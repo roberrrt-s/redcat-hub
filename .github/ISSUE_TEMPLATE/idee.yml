@@ -1,0 +1,30 @@
+name: "Idee of verzoek"
+description: "Een wens voor de moderne schil, of een titel die je graag als volgende zou zien."
+title: "[Idee] "
+labels: ["idee"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        De spelregels en de inhoud blijven die van het origineel — dat is
+        het hele punt. Maar de schil eromheen (bediening, schermen,
+        toegankelijkheid) is modern, en daar is ruimte voor ideeën. Ook
+        stemmen op de volgende titel mag hier.
+  - type: dropdown
+    id: soort
+    attributes:
+      label: Wat voor idee?
+      options:
+        - De moderne schil (bediening, weergave, geluid)
+        - Een volgende titel porten
+        - De hub-website
+        - Iets anders
+    validations:
+      required: true
+  - type: textarea
+    id: idee
+    attributes:
+      label: Het idee
+      placeholder: "Touch-bediening zodat het op een tablet speelt zoals vroeger met de muis."
+    validations:
+      required: true
