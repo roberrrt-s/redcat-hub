@@ -22,12 +22,18 @@
 # The ports live under this domain as paths, proxied to their own Netlify
 # sites (200 = rewrite, the address bar keeps this domain). The game builds
 # with a relative Vite `base`, so its assets resolve under the prefix.
-[[redirects]]
-  from = "/de-spannende-stedentocht"
-  to = "/de-spannende-stedentocht/"
-  status = 301
-
+#
+# RULE ORDER MATTERS: Netlify matches `from` paths with AND without trailing
+# slash, so a bare-path 301 listed first also caught the slashed URL and
+# redirected it to itself, forever. The proxy comes first — slashed requests
+# never reach the 301 — and the 301 only catches the bare path, whose
+# relative asset URLs would otherwise resolve one level too high.
 [[redirects]]
   from = "/de-spannende-stedentocht/*"
   to = "https://redcat-stedentocht.netlify.app/:splat"
   status = 200
+
+[[redirects]]
+  from = "/de-spannende-stedentocht"
+  to = "/de-spannende-stedentocht/"
+  status = 301

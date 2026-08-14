@@ -28,9 +28,9 @@ const PACKS: Pack[] = [
       { naam: "De Razende Rekenrace", vak: "Oefen rekenen in een razende race door de ruimte.", jaar: "1996", url: null },
       {
         naam: "De Spannende Stedentocht", vak: "Zoek de kaartstukken bij elkaar in de twaalf provincies.", jaar: "1997",
-        // The one live port, served under this domain via the netlify.toml
-        // proxy to redcat-stedentocht.netlify.app.
-        url: "/de-spannende-stedentocht/",
+        // The one live port, served on the canonical domain via the
+        // netlify.toml proxy to redcat-stedentocht.netlify.app.
+        url: "https://redcat.robertspier.nl/de-spannende-stedentocht/",
       },
       { naam: "De Woeste Woordenbrij", vak: "Haal je gestolen letters terug en oefen spelling.", jaar: "1996", url: null },
       { naam: "Het Levende Kleurboek", vak: "Een kleurboek waarvan de platen tot leven komen.", jaar: "1997", url: null },
@@ -119,6 +119,10 @@ export default function App() {
         <p>
           Gemaakt door Robert Spier,{" "}
           <a href="https://github.com/roberrrt-s">roberrrt-s</a> op GitHub.
+          Iets kapot, of anders dan vroeger?{" "}
+          <a href="https://github.com/roberrrt-s/redcat-hub/issues">
+            Meld het hier
+          </a>.
         </p>
       </footer>
     </main>
