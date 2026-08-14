@@ -1,0 +1,28 @@
+# The hub is plain static content, so this site CAN use git-connected CI
+# builds — unlike the game ports, whose assets are generated from the original
+# discs and deploy via `netlify deploy` from a machine that has them.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Vite fingerprints everything under /assets, so those may cache forever.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Uncomment to serve a port under this domain instead of linking out —
+# pattern B from the deployment plan. The port must then build with a
+# matching Vite `base`.
+# [[redirects]]
+#   from = "/stedentocht/*"
+#   to = "https://redcat-stedentocht.netlify.app/:splat"
+#   status = 200

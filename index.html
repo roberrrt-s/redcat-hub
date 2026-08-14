@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RedCat in de browser</title>
+    <meta
+      name="description"
+      content="De klassieke RedCat-spellen van Davilex (1996–1998), stuk voor stuk nagebouwd in de browser. De Spannende Stedentocht is speelbaar."
+    />
+    <meta name="theme-color" content="#006b3d" />
+    <!-- RedCat's ship, straight out of the game's own sprites: the same
+         favicon the Stedentocht port uses, so the tabs read as one family. -->
+    <link rel="icon" type="image/png" href="/redcat.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Absolute URLs below assume the Netlify site name; update canonical,
+         og:url, og:image and twitter:image (plus robots.txt and sitemap.xml)
+         if the production domain changes. -->
+    <link rel="canonical" href="https://redcat-hub.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RedCat in de browser" />
+    <meta property="og:title" content="RedCat in de browser" />
+    <meta
+      property="og:description"
+      content="De klassieke RedCat-spellen van Davilex, nagebouwd in de browser, met originele graphics, origineel geluid en originele spelregels."
+    />
+    <meta property="og:url" content="https://redcat-hub.netlify.app/" />
+    <meta property="og:image" content="https://redcat-hub.netlify.app/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="RedCat in de browser: de titel in rood en geel op een groen kaartveld."
+    />
+    <meta property="og:locale" content="nl_NL" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RedCat in de browser" />
+    <meta
+      name="twitter:description"
+      content="De klassieke RedCat-spellen van Davilex, nagebouwd in de browser."
+    />
+    <meta name="twitter:image" content="https://redcat-hub.netlify.app/og.jpg" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "RedCat in de browser",
+          "url": "https://redcat-hub.netlify.app/",
+          "inLanguage": "nl",
+          "description": "De klassieke RedCat-spellen van Davilex, nagebouwd in de browser."
+        },
+        {
+          "@type": "ItemList",
+          "name": "De twaalf RedCat-titels",
+          "numberOfItems": 12,
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "item": { "@type": "VideoGame", "name": "De Razende Rekenrace", "datePublished": "1996", "publisher": { "@type": "Organization", "name": "Davilex" } } },
+            { "@type": "ListItem", "position": 2, "item": { "@type": "VideoGame", "name": "De Spannende Stedentocht", "datePublished": "1997", "publisher": { "@type": "Organization", "name": "Davilex" }, "gamePlatform": "Webbrowser", "url": "https://redcat-stedentocht.netlify.app" } },
+            { "@type": "ListItem", "position": 3, "item": { "@type": "VideoGame", "name": "De Woeste Woordenbrij", "datePublished": "1996", "publisher": { "@type": "Organization", "name": "Davilex" } } },
+            { "@type": "ListItem", "position": 4, "item": { "@type": "VideoGame", "name": "Het Levende Kleurboek", "datePublished": "1997", "publisher": { "@type": "Organization", "name": "Davilex" } } },
+            { "@type": "ListItem", "position": 5, "item": { "@type": "VideoGame", "name": "De Toffe Tijdreis", "datePublished": "1997", "publisher": { "@type": "Organization", "name": "Davilex" } } },
+            { "@type": "ListItem", "position": 6, "item": { "@type": "VideoGame", "name": "Het Machtige Monumenten Mysterie", "datePublished": "1997", "publisher": { "@type": "Organization", "name": "Davilex" } } },
+            { "@type": "ListItem", "position": 7, "item": { "@type": "VideoGame", "name": "De Europese Stedentocht", "datePublished": "1998", "publisher": { "@type": "Organization", "name": "Davilex" } } },
+            { "@type": "ListItem", "position": 8, "item": { "@type": "VideoGame", "name": "De Brutale Bankroof", "datePublished": "1998", "publisher": { "@type": "Organization", "name": "Davilex" } } },
+            { "@type": "ListItem", "position": 9, "item": { "@type": "VideoGame", "name": "De Duistere Dierendiefstal", "datePublished": "1998", "publisher": { "@type": "Organization", "name": "Davilex" } } },
+            { "@type": "ListItem", "position": 10, "item": { "@type": "VideoGame", "name": "De Snelle Sommenrace", "datePublished": "1998", "publisher": { "@type": "Organization", "name": "Davilex" } } },
+            { "@type": "ListItem", "position": 11, "item": { "@type": "VideoGame", "name": "De Reusachtige Letterraket", "datePublished": "1998", "publisher": { "@type": "Organization", "name": "Davilex" } } },
+            { "@type": "ListItem", "position": 12, "item": { "@type": "MusicRecording", "name": "De Knallende Komeet", "datePublished": "1998", "publisher": { "@type": "Organization", "name": "Davilex" } } }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

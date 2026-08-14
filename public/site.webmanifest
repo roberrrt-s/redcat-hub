@@ -1,0 +1,12 @@
+{
+  "name": "RedCat in de browser",
+  "short_name": "RedCat",
+  "description": "De klassieke RedCat-spellen van Davilex, nagebouwd in de browser.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#006b3d",
+  "theme_color": "#006b3d",
+  "icons": [
+    { "src": "/redcat.png", "sizes": "156x156", "type": "image/png" }
+  ]
+}
