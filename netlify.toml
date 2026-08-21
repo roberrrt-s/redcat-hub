@@ -37,3 +37,13 @@
   from = "/de-spannende-stedentocht"
   to = "/de-spannende-stedentocht/"
   status = 301
+
+[[redirects]]
+  from = "/de-knallende-komeet/*"
+  to = "https://redcat-knallende-komeet.netlify.app/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/de-knallende-komeet"
+  to = "/de-knallende-komeet/"
+  status = 301
