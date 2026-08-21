@@ -4,7 +4,7 @@
  * Each entry becomes its own repo and its own Netlify site; this page is the
  * front door that links to whichever ports are live. Today that is two:
  * De Spannende Stedentocht, and De Knallende Komeet — the Megapack 3
- * bonus audio-cd, which is why its badge says listen rather than play.
+ * bonus audio-cd.
  */
 
 interface Title {
@@ -13,8 +13,6 @@ interface Title {
   jaar: string;
   /** Absolute or relative URL of the live port; null while still parked. */
   url: string | null;
-  /** Live-badge text; defaults to "speelbaar". The audio-cd overrides it. */
-  badge?: string;
 }
 
 interface Pack {
@@ -58,7 +56,6 @@ const PACKS: Pack[] = [
         naam: "De Knallende Komeet", vak: "Liedjes en verhalen van RedCat, Brutus en Max — de bonus-audio-cd.", jaar: "1998",
         // The audio-cd port, proxied to redcat-knallende-komeet.netlify.app.
         url: "https://redcat.robertspier.nl/de-knallende-komeet/",
-        badge: "te beluisteren",
       },
     ],
   },
@@ -75,7 +72,7 @@ function Rij({ t }: { t: Title }) {
       <span className="vak">{t.vak}</span>
       <time dateTime={t.jaar}>{t.jaar}</time>
       <span className={t.url ? "badge live" : "badge"}>
-        {t.url ? (t.badge ?? "speelbaar") : "binnenkort"}
+        {t.url ? "speelbaar" : "binnenkort"}
       </span>
     </>
   );
@@ -96,9 +93,8 @@ export default function App() {
         <p className="intro">
           De klassieke RedCat-spellen, stuk voor stuk nagebouwd in de
           browser, met originele graphics, origineel geluid en originele
-          spelregels — en één titel is geen spel maar een audio-cd, dus die
-          kun je beluisteren. Twee van de twaalf staan online; de rest staat
-          nog in de kast.
+          spelregels. Twee titels zijn speelbaar; de rest van de twaalf
+          staat nog in de kast.
         </p>
       </header>
 

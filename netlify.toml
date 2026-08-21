@@ -28,6 +28,13 @@
 # redirected it to itself, forever. The proxy comes first — slashed requests
 # never reach the 301 — and the 301 only catches the bare path, whose
 # relative asset URLs would otherwise resolve one level too high.
+#
+# Re-verified on a draft deploy, 2026-08-21: the loop is still real, and so
+# is the flip side — with the proxy first, the BARE path never reaches the
+# 301 either (the /* rule matches it), so it serves the app with its
+# relative assets broken. The ports therefore carry a one-line inline guard
+# in their index.html that bounces /pad to /pad/ before any asset loads;
+# these rules alone cannot express "301 the bare path, proxy the rest".
 [[redirects]]
   from = "/de-spannende-stedentocht/*"
   to = "https://redcat-stedentocht.netlify.app/:splat"
