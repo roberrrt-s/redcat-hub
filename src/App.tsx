@@ -27,7 +27,7 @@ const PACKS: Pack[] = [
     naam: "Megapack 1", jaar: "1997",
     titels: [
       {
-        naam: "De Razende Rekenrace", vak: "Race tegen Brutus en Max en verdien benzine en boosts in de Rekengarage.", jaar: "1996",
+        naam: "De Razende Rekenrace", vak: "Race tegen Brutus en Max en oefen rekenen in de garage.", jaar: "1996",
         // The race port, proxied to redcat-rekenrace.netlify.app.
         url: "https://redcat.robertspier.nl/de-razende-rekenrace/",
       },
@@ -97,7 +97,7 @@ export default function App() {
         <p className="intro">
           De klassieke RedCat-spellen, stuk voor stuk nagebouwd in de
           browser, met originele graphics, origineel geluid en originele
-          spelregels. Twee titels zijn speelbaar; de rest van de twaalf
+          spelregels. Drie titels zijn speelbaar; de rest van de twaalf
           staat nog in de kast.
         </p>
       </header>
