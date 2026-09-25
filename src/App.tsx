@@ -2,9 +2,9 @@
  * The RedCat hub: an index of the twelve Davilex RedCat titles.
  *
  * Each entry becomes its own repo and its own Netlify site; this page is the
- * front door that links to whichever ports are live. Today that is four:
- * De Razende Rekenrace, De Spannende Stedentocht, De Woeste Woordenbrij, and
- * De Knallende Komeet — the Megapack 3 bonus audio-cd.
+ * front door that links to whichever ports are live. Today that is five:
+ * De Razende Rekenrace, De Spannende Stedentocht, De Woeste Woordenbrij,
+ * Het Levende Kleurboek, and De Knallende Komeet — the Megapack 3 bonus audio-cd.
  */
 
 interface Title {
@@ -42,7 +42,11 @@ const PACKS: Pack[] = [
         // The word-maze port, proxied to redcat-woordenbrij.netlify.app.
         url: "https://redcat.robertspier.nl/de-woeste-woordenbrij/",
       },
-      { naam: "Het Levende Kleurboek", vak: "Een kleurboek waarvan de platen tot leven komen.", jaar: "1997", url: null },
+      {
+        naam: "Het Levende Kleurboek", vak: "Een kleurboek waarvan de platen tot leven komen.", jaar: "1996",
+        // The colouring-book port, proxied to redcat-kleurboek.netlify.app.
+        url: "https://redcat.robertspier.nl/het-levende-kleurboek/",
+      },
     ],
   },
   {
@@ -101,7 +105,7 @@ export default function App() {
         <p className="intro">
           De klassieke RedCat-spellen, stuk voor stuk nagebouwd in de
           browser, met originele graphics, origineel geluid en originele
-          spelregels. Vier titels zijn speelbaar; de rest van de twaalf
+          spelregels. Vijf titels zijn speelbaar; de rest van de twaalf
           staat nog in de kast.
         </p>
       </header>
